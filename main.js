@@ -3,33 +3,6 @@
 /* ============================================================ */
 
 /* ------------------------------ */
-/* CURSOR PERSONALIZADO           */
-/* ------------------------------ */
-
-const cursor = document.getElementById('cursor');
-const trail = document.getElementById('cursor-trail');
-
-let mouseX = 0, mouseY = 0;
-let trailX = 0, trailY = 0;
-
-document.addEventListener('mousemove', (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  cursor.style.left = mouseX + 'px';
-  cursor.style.top = mouseY + 'px';
-});
-
-// Trail com lag suave
-function animateTrail() {
-  trailX += (mouseX - trailX) * 0.15;
-  trailY += (mouseY - trailY) * 0.15;
-  trail.style.left = trailX + 'px';
-  trail.style.top = trailY + 'px';
-  requestAnimationFrame(animateTrail);
-}
-animateTrail();
-
-/* ------------------------------ */
 /* TYPING EFFECT — HERO           */
 /* ------------------------------ */
 
