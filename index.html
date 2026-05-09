@@ -1,268 +1,325 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 
 <head>
-    <title>Site Pessoal</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./html.css">
-    <link rel="icon" type="image/png" href="imagens/image.png">
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700&family=DM+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomás Carvalho — Portfolio</title>
+  <meta name="description" content="Portfolio de Tomás Carvalho — Engenharia Informática & Cibersegurança">
+  <link rel="stylesheet" href="./html.css">
+  <link rel="icon" type="image/png" href="imagens/image.png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="intro">
-        <h1>Bem-vindo ao meu portefólio</h1>
-        <p
-            style="font-family:var(--font-mono); font-size:0.95rem; color:var(--text-mid); margin-top:16px; letter-spacing:1px;">
-            Estudante de Engenharia Informática • Cibersegurança Enthusiast
-        </p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#quemsoueu">Quem sou eu?</a></li>
-            <li><a href="#skillss">Skills</a></li>
-            <li><a href="#cursoss">Certificações</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#aprender">O que estou a aprender agora?</a></li>
-            <li><a href="#mimm">Sobre mim</a></li>
-            <li><a href="#linkss">Links úteis</a></li>
-            <li><a href="#contacts">Contactos</a></li>
-        </ul>
-    </nav>
-    <section id="quemsoueu" class="sobreMim">
-        <h1>Quem sou eu?</h1>
+
+  <!-- CURSOR personalizado -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursor-trail"></div>
+
+  <!-- HEADER -->
+  <header class="intro">
+    <div class="intro-content">
+      <p class="intro-label">// hello world</p>
+      <h1 id="typed-title"></h1>
+      <p class="intro-sub">Estudante de Engenharia Informática <span class="sep">•</span> Cibersegurança Enthusiast</p>
+      <div class="intro-badges">
+        <span class="badge">IPT — Tomar</span>
+        <span class="badge">🇵🇹 Portugal</span>
+        <span class="badge badge-green">Open to Learn</span>
+      </div>
+      <a href="#quemsoueu" class="scroll-cta">scroll down <span class="arrow">↓</span></a>
+    </div>
+    <div class="intro-grid-bg"></div>
+  </header>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#quemsoueu">whoami</a></li>
+      <li><a href="#skillss">skills</a></li>
+      <li><a href="#cursoss">certs</a></li>
+      <li><a href="#projects">projetos</a></li>
+      <li><a href="#search-section">search</a></li>
+      <li><a href="#aprender">learning</a></li>
+      <li><a href="#mimm">sobre</a></li>
+      <li><a href="#contacts">contacto</a></li>
+    </ul>
+    <div class="nav-progress" id="nav-progress"></div>
+  </nav>
+
+  <!-- QUEM SOU EU -->
+  <section id="quemsoueu" class="sobreMim reveal">
+    <h1>whoami</h1>
+    <div class="about-grid">
+      <div class="about-photo">
         <img src="imagens/image.png" alt="Foto de Tomás" class="foto-perfil">
-        <p>Eu sou o <b>Tomás Afonso Ferreira Carvalho</b> tenho 18 anos de idade
-            sou de Vila Nova da Barquinha, sou estudante no IPT(Instituto Politécnico de Tomar
-            ) estou a fazer a Licenciatura de Engenharia Informática.</p>
-        <p>Gosto de programação se não, não estaria nesta área, nunca foi a minha 1ª opção
-            mas pronto cá estou eu, nunca me vi a fazer algo sentado o dia todo, mas as coisas mudam.</p>
-        <p>Ao entrar neste curso apercebi-me de diversas coisas que nunca antes tinha visto ou percebido,
-            desenvolvi uma forte relação em querer aprender mais e mais, o que me leva a pensar no porquê de não ter
-            estudado mais cedo
-            no meu percurso escolar, no início senti-me um pouco perdido no curso mas depois de ver coisas que me
-            fizeram abrir
-            os horizontes apaixonei-me pela área!</p>
-        <p>Mas todos temos uma área preferida não é, bem a minha é tudo o que tenho a ver com Segurança Informática.</p>
-        <h4>O que me motiva?</h4>
-        <p>Foi ter percebido que a informática é um mundo gigante.</p>
-        <h2>Não deixes para amanhã o que podes fazer hoje!</h2>
-    </section>
-    <section id="skillss" class="Skills">
-        <h1>Skills</h1>
-        <div class="skills-grid">
+        <div class="photo-glow"></div>
+      </div>
+      <div class="about-text">
+        <p>Sou o <b>Tomás Afonso Ferreira Carvalho</b>, 18 anos, de Vila Nova da Barquinha. Estudo Engenharia Informática no IPT — Instituto Politécnico de Tomar.</p>
+        <p>Desde que entrei no curso descobri um mundo que nunca parei de explorar. Desenvolvi uma obsessão por aprender — especialmente tudo o que tem a ver com <b>Segurança Informática</b>: pentesting, bug bounty, SOC, análise de vulnerabilidades.</p>
+        <p>Cada projeto que construo é uma oportunidade de perceber melhor como os sistemas funcionam — e como podem falhar.</p>
+        <blockquote>"Não deixes para amanhã o que podes fazer hoje."</blockquote>
+      </div>
+    </div>
+  </section>
 
-            <!-- <div class="skill-item">
-        <img src="icons/algorithmi.ico" class="skill-icon">
-        <span>Algorithmi</span>
-    </div> -->
+  <!-- SKILLS -->
+  <section id="skillss" class="Skills reveal">
+    <h1>skills</h1>
+    <div class="skills-grid">
+      <div class="skill-item" data-level="intermediário">
+        <img src="icons/python.svg" class="skill-icon" alt="Python">
+        <span>Python</span>
+        <div class="skill-level">intermédio</div>
+      </div>
+      <div class="skill-item" data-level="junior">
+        <img src="icons/java.svg" class="skill-icon" alt="Java">
+        <span>Java</span>
+        <div class="skill-level">júnior</div>
+      </div>
+      <div class="skill-item">
+        <img src="icons/html.svg" class="skill-icon" alt="HTML">
+        <span>HTML</span>
+      </div>
+      <div class="skill-item">
+        <img src="icons/css.svg" class="skill-icon" alt="CSS">
+        <span>CSS</span>
+      </div>
+      <div class="skill-item">
+        <img src="icons/javascript.svg" class="skill-icon" alt="JavaScript">
+        <span>JavaScript</span>
+      </div>
+      <div class="skill-item">
+        <img src="icons/php.svg" class="skill-icon" alt="PHP">
+        <span>PHP</span>
+      </div>
+      <div class="skill-item">
+        <img src="icons/git.svg" class="skill-icon" alt="Git">
+        <span>Git</span>
+      </div>
+      <div class="skill-item">
+        <img src="icons/github.svg" class="skill-icon" alt="GitHub">
+        <span>GitHub</span>
+      </div>
+      <div class="skill-item">
+        <img src="icons/kali.svg" class="skill-icon" alt="Kali Linux">
+        <span>Kali Linux</span>
+        <div class="skill-level">intermédio</div>
+      </div>
+      <div class="skill-item" data-level="iniciante">
+        <img src="icons/linux.svg" class="skill-icon" alt="Linux">
+        <span>Linux</span>
+        <div class="skill-level">iniciante</div>
+      </div>
+      <div class="skill-item">
+        <img src="icons/windows.svg" class="skill-icon" alt="Windows">
+        <span>Windows</span>
+      </div>
+      <div class="skill-item">
+        <img src="icons/intellij.svg" class="skill-icon" alt="IntelliJ">
+        <span>IntelliJ</span>
+      </div>
+      <div class="skill-item">
+        <img src="icons/vscode.svg" class="skill-icon" alt="VSCode">
+        <span>VSCode</span>
+      </div>
+      <div class="skill-item">
+        <img src="icons/pycharm.svg" class="skill-icon" alt="PyCharm">
+        <span>PyCharm</span>
+      </div>
+      <div class="skill-item">
+        <img src="icons/netbeans.svg" class="skill-icon" alt="NetBeans">
+        <span>NetBeans</span>
+      </div>
+    </div>
+    <p class="skills-note">Foco em Cibersegurança · Bug Bounty · Pentesting · SOC</p>
+  </section>
 
-            <div class="skill-item">
-                <img src="icons/python.svg" class="skill-icon">
-                <span>Python (intermediário)</span>
-            </div>
-
-            <div class="skill-item">
-                <img src="icons/java.svg" class="skill-icon">
-                <span>Java (junior)</span>
-            </div>
-
-            <div class="skill-item">
-                <img src="icons/html.svg" class="skill-icon">
-                <span>HTML</span>
-            </div>
-
-            <div class="skill-item">
-                <img src="icons/css.svg" class="skill-icon">
-                <span>CSS</span>
-            </div>
-
-            <div class="skill-item">
-                <img src="icons/git.svg" class="skill-icon">
-                <span>Git</span>
-            </div>
-
-            <div class="skill-item">
-                <img src="icons/github.svg" class="skill-icon">
-                <span>GitHub</span>
-            </div>
-
-            <div class="skill-item">
-                <img src="icons/vscode.svg" class="skill-icon">
-                <span>VSCode</span>
-            </div>
-
-            <div class="skill-item">
-                <img src="icons/intellij.svg" class="skill-icon">
-                <span>IntelliJ</span>
-            </div>
-
-            <div class="skill-item">
-                <img src="icons/pycharm.svg" class="skill-icon">
-                <span>PyCharm</span>
-            </div>
-
-            <div class="skill-item">
-                <img src="icons/netbeans.svg" class="skill-icon">
-                <span>NetBeans</span>
-            </div>
-
-            <div class="skill-item">
-                <img src="icons/windows.svg" class="skill-icon">
-                <span>Windows</span>
-            </div>
-
-            <div class="skill-item">
-                <img src="icons/linux.svg" class="skill-icon">
-                <span>Linux (iniciante)</span>
-            </div>
-
-            <div class="skill-item">
-                <img src="icons/kali.svg" class="skill-icon">
-                <span>Kali (intermediário)</span>
-            </div>
-
-            <div class="skill-item">
-                <img src="icons/javascript.svg" class="skill-icon">
-                <span>JavaScript</span>
-            </div>
-        
-            <div class="skill-item">
-                <img src="icons/php.svg" class="skill-icon">
-                <span>PHP</span>
-            </div>
+  <!-- CERTIFICAÇÕES -->
+  <section id="cursoss" class="cursos reveal">
+    <h1>certificações</h1>
+    <div class="certs-grid">
+      <a class="cert-card" href="https://www.credly.com/badges/1647053c-f529-4eff-97ec-0fc4dcdc376e/public_url" target="_blank" rel="noopener">
+        <img src="icons/introductiontocybersecurity.png" class="cert-icon" alt="Cisco Cybersecurity">
+        <div class="cert-info">
+          <span class="cert-name">Introduction to Cybersecurity</span>
+          <span class="cert-issuer">Cisco · Credly Verified</span>
         </div>
+        <span class="cert-arrow">→</span>
+      </a>
+    </div>
+  </section>
 
-        <p>
-            Gosto de aprender, sou muito curioso, por norma tento pesquisar o que não sei.
-            Tenho um grande foco em Cibersegurança, Bug Bounty, Pentesting, SOC (Security Operations Center), etc...
-        </p>
-    </section>
-    <section id="cursoss" class="cursos">
-        <h1>Certificações</h1>
-        <div class="skill-item">
-            <a href="https://www.credly.com/badges/1647053c-f529-4eff-97ec-0fc4dcdc376e/public_url" target="_blank">
-                <img src="icons/introductiontocybersecurity.png" class="skill-icon">
-            </a>
-            <span>Introduction to Cybersecurity(cisco)</span>
-        </div>
-    </section>
-    <section id="projects" class="projetos">
-        <h1>Projetos</h1>
-        <div>
-            <h3>DigitalWallet</h3>
-            <p>A DigitalWallet é uma aplicação bancária desenvolvida em Java que simula o funcionamento de uma carteira
-                digital real.
-                Permite criar contas, realizar depósitos, levantamentos e consultar o saldo de forma simples e
-                intuitiva.
-                <br>Este projeto foi criado para consolidar conceitos de programação orientada a objetos, validação de
-                dados e lógica aplicada a operações financeiras, demonstrando a minha capacidade de transformar
-                problemas reais em soluções funcionais.
-                <br>É um dos meus primeiros projetos estruturados e marcou o início da minha paixão por construir
-                sistemas úteis e bem organizados.
-            </p>
-            <a href="https://github.com/tomasafonsoferreiracarvalho-eng/DigitalWallet" target="_blank"
-                rel="noopener">DigitalWallet</a>
-        </div>
-        <div>
-            <h3>Página Pessoal</h3>
-            <p>A minha Página Pessoal é um site criado em HTML e CSS para mostrar quem sou, o que faço e como estou a
-                evoluir na área da informática.<br>É um projeto simples mas importante para mim, porque marca o início
-                da minha presença online como programador.</p>
-            <a href="https://github.com/tomasafonsoferreiracarvalho-eng/site_pessoal" target="_blank"
-                rel="noopener">Página Pessoal</a>
-        </div>
-        <div>
-            <h3>Biblioteca</h3>
-            <p>A Biblioteca é uma aplicação simples desenvolvida em Java que simula um sistema básico de gestão de
-                livros.
-                Permite criar utilizadores, adicionar obras, listar o catálogo, emprestar e devolver livros de forma
-                intuitiva.<br>
-                Este projeto foi criado para praticar conceitos fundamentais de programação orientada a objetos, como
-                classes, métodos, encapsulamento e manipulação de coleções com [ArrayList].
-                Representa um dos meus primeiros sistemas estruturados em Java e reforça a minha evolução na criação de
-                aplicações organizadas e funcionais.</p>
-            <a href="https://github.com/tomasafonsoferreiracarvalho-eng/Biblioteca" target="_blank"
-                rel="noopener">Biblioteca</a>
-        </div>
-        <div>
-            <h3>Projeto Final de WEB</h3>
-            <p>Este site foi projetado para servir de explorador de jogos em qualquer plataforma.<br>
-                Neste projeto usei HTML, CSS, JavaScript e PHP, eram as ferramentas pedidas pelo Professor Coordenador
-                da UC.<br>
-                É literalmente um site onde as pessoas podem procurar pelos seus jogos preferidos e partilhar com as
-                outras pessoas.</p>
-            <a href="https://github.com/tomasafonsoferreiracarvalho-eng/Final_Project_IPW" target="_blank"
-                rel="noopener">Biblioteca de jogos</a>
-        </div>
-        <div>
-            <h3>Script YTB-download</h3>
-            <p>Script em Python que faz download de músicas do YouTube em MP3 diretamente pelo terminal. 
-                Usa as bibliotecas yt-dlp e ffmpeg para extrair e converter o áudio automaticamente.</p>
-            <a href="https://github.com/tomasafonsoferreiracarvalho-eng/YTB-download" target="_blank" rel="noopener">YTB-download</a>
-        </div>
-        <div>
-            <h3>Gestão de Frotas</h3>
-            <p>Projeto desenvolvido para consolidar conceitos de Programação Orientada a Objetos. Implementa uma frota de veículos com herança, polimorfismo, classes abstratas e interfaces, permitindo adicionar, listar, remover veículos e calcular custos de aluguer por tipo.</p>
-            <a href="https://github.com/tomasafonsoferreiracarvalho-eng/gestao_de_frotas_de_veics/tree/master" target="_blank" rel="noopener">Gestão de Frotas</a>
-        </div>
-    </section>
-    <section id="aprender" class="learn">
-        <h1>O que estou a aprender agora?</h1>
-        <p>Além de estar a tirar o curso e a estudar para as cadeiras todas
-            também tento estudar Segurança Informática e mais tarde, certamente, quando tiver um maior leque de
-            conhecimentos irei publicar, como scripts, exploits, etc...</p>
-        <a class="linkss-item" href="https://roadmap.sh/cyber-security" target="_blank" rel="noopener">RoadMap Cyber
-            Security</a>
-        <a class="linkss-item" href="https://www.learnpython.org/en/" target="_blank" rel="noopener">Learn Python</a>
-        <a class="linkss-item" href="https://www.cursoemvideo.com/curso/java-poo/" target="_blank" rel="noopener">Learn
-            Java</a>
-        <a class="linkss-item" href="https://www.codecademy.com/" target="_blank" rel="noopener">Learn CSS HTML</a>
-        <a class="linkss-item" href="https://www.codingame.com/" target="_blank" rel="noopener">Play and Learn</a>
-        <h2 id="need-margin-top"><-Search-></h2>
-        <p>Scanner de Credenciais e Dados Sensíveis
-            Projeto pessoal — Auditoria de Infraestrutura<br>
-            Desenvolvi de raiz uma ferramenta de auditoria interna em Python para identificar exposições de credenciais e ficheiros sensíveis em redes empresariais.
-            <br>O projeto envolveu o desenvolvimento de um motor de scan multi-thread com suporte a múltiplos modos de operação, implementação de mais de 20 padrões de deteção de credenciais e tokens de serviços cloud modernos, sistema de classificação de risco automático e redução de falsos positivos através de análise de entropia de Shannon e scoring contextual. Inclui ainda um relatório HTML interativo gerado automaticamente com gráficos, filtros e exportação CSV, totalmente funcional offline.
-            <br>Tecnologias utilizadas: Python 3 · Regex avançado · Análise de entropia · Threading · HTML/CSS/JS<br>
-            <strong id="up">Ferramenta não disponibilizada publicamente por razões de segurança.</strong></p>
-            <a class="linkss-item" href="https://github.com/tomasafonsoferreiracarvalho-eng/Search-without-code-" target="_blank" rel="noopener">Search</a>
-            <a href="imagens/search_operation.png" target="_blank" rel="noopener">
-                <img class="search_operation" src="imagens/search_operation.png">
-            </a>
-    </section>
-    <section id="mimm" class="mim">
-        <h1>Sobre mim</h1>
-        <p>Penso que o mundo pode vir a tornar-se algo que ninguém consegue prever, especialmente porque a humanidade
-            não está preparada!<br>
-            Portanto a cada dia que passa tento-me informar mais sobre o presente e pensar sobre o futuro.<br>Hobbies:
-            ler, ver séries, correr, passear, falar com os amigos, partilhar conhecimentos, explorar a DeepWeb, etc...
-        </p>
-    </section>
-    <section id="linkss" class="linkss">
-        <h2>Links úteis</h2>
-        <ul>
-            <li><a href="https://github.com/tomasafonsoferreiracarvalho-eng" target="_blank" rel="noopener">GitHub</a>
-            </li>
-            <li><a href="https://www.instagram.com/_._.patinho._._/" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://portal2.ipt.pt/pt/cursos/licenciaturas/l_-_ei/" target="_blank" rel="noopener">Curso
-                    LEI</a></li>
-            <li><a href="https://www.linkedin.com/in/tomás-carvalho-09282a3aa" target="_blank"
-                    rel="noopener">LinkedIn</a></li>
-        </ul>
-    </section>
-    <section id="contacts" class="contactos">
-        <h2>Contactos</h2>
-        <p><b>E-mail:</b>tomasafonsoferreiracarvalho@gmail.com // aluno28175@ipt.pt</p>
-    </section>
+  <!-- PROJETOS -->
+  <section id="projects" class="projetos reveal">
+    <h1>projetos</h1>
+    <div class="projects-list">
 
-    <footer>
-        <p>© 2026 Tomás Carvalho</p>
-    </footer>
+      <div class="project-card">
+        <div class="project-header">
+          <h3>DigitalWallet</h3>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">POO</span>
+          </div>
+        </div>
+        <p>Aplicação bancária em Java que simula uma carteira digital real. Permite criar contas, realizar depósitos, levantamentos e consultar saldo. Desenvolvida para consolidar conceitos de POO, validação de dados e lógica financeira.</p>
+        <a href="https://github.com/tomasafonsoferreiracarvalho-eng/DigitalWallet" target="_blank" rel="noopener" class="project-link">Ver no GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Gestão de Frotas</h3>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Herança</span>
+            <span class="tag">Polimorfismo</span>
+            <span class="tag">Interfaces</span>
+          </div>
+        </div>
+        <p>Sistema de gestão de frota de veículos com herança, polimorfismo, classes abstratas e interfaces. Permite adicionar, listar e remover veículos e calcular custos de aluguer por tipo.</p>
+        <a href="https://github.com/tomasafonsoferreiracarvalho-eng/gestao_de_frotas_de_veics/tree/master" target="_blank" rel="noopener" class="project-link">Ver no GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Biblioteca</h3>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">POO</span>
+            <span class="tag">ArrayList</span>
+          </div>
+        </div>
+        <p>Sistema básico de gestão de livros em Java. Cria utilizadores, adiciona obras, lista catálogo, empréstimos e devoluções. Foco em encapsulamento e manipulação de coleções.</p>
+        <a href="https://github.com/tomasafonsoferreiracarvalho-eng/Biblioteca" target="_blank" rel="noopener" class="project-link">Ver no GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Projeto Final de WEB</h3>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">PHP</span>
+          </div>
+        </div>
+        <p>Explorador de jogos multiplataforma onde os utilizadores pesquisam e partilham os seus jogos preferidos. Projeto final da UC de Programação Web.</p>
+        <a href="https://github.com/tomasafonsoferreiracarvalho-eng/Final_Project_IPW" target="_blank" rel="noopener" class="project-link">Ver no GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>YTB-download</h3>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">yt-dlp</span>
+            <span class="tag">ffmpeg</span>
+          </div>
+        </div>
+        <p>Script Python para download de músicas do YouTube em MP3 diretamente pelo terminal, usando yt-dlp e ffmpeg para extração e conversão automática de áudio.</p>
+        <a href="https://github.com/tomasafonsoferreiracarvalho-eng/YTB-download" target="_blank" rel="noopener" class="project-link">Ver no GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Página Pessoal</h3>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
+        </div>
+        <p>Este próprio site — portfolio pessoal construído de raiz em HTML e CSS com estética cyberpunk. Primeiro projeto web próprio, que continua a evoluir.</p>
+        <a href="https://github.com/tomasafonsoferreiracarvalho-eng/site_pessoal" target="_blank" rel="noopener" class="project-link">Ver no GitHub →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEARCH — PROJETO ESPECIAL -->
+  <section id="search-section" class="search-section reveal">
+    <div class="search-inner">
+      <div class="search-label">// projeto destacado</div>
+      <h2 class="search-title">&lt;- Search -&gt;</h2>
+      <p class="search-sub">Scanner de Credenciais e Dados Sensíveis</p>
+      <p class="search-desc">Ferramenta de auditoria interna desenvolvida de raiz em Python para identificar exposições de credenciais e ficheiros sensíveis em redes empresariais.</p>
+      <ul class="search-features">
+        <li>Motor de scan multi-thread com múltiplos modos de operação</li>
+        <li>+20 padrões de deteção de credenciais e tokens cloud</li>
+        <li>Classificação de risco automático com análise de entropia de Shannon</li>
+        <li>Relatório HTML interativo com gráficos, filtros e exportação CSV</li>
+      </ul>
+      <div class="search-tags">
+        <span class="tag tag-cyan">Python 3</span>
+        <span class="tag tag-cyan">Regex</span>
+        <span class="tag tag-cyan">Threading</span>
+        <span class="tag tag-cyan">Entropia de Shannon</span>
+        <span class="tag tag-cyan">HTML/CSS/JS</span>
+      </div>
+      <div class="search-warning">⚠ Ferramenta não disponibilizada publicamente por razões de segurança.</div>
+      <a href="https://github.com/tomasafonsoferreiracarvalho-eng/Search-without-code-" target="_blank" rel="noopener" class="project-link">Repositório (sem código) →</a>
+      <a href="imagens/search_operation.png" target="_blank" rel="noopener">
+        <img class="search_operation" src="imagens/search_operation.png" alt="Search em operação">
+      </a>
+    </div>
+  </section>
+
+  <!-- O QUE ESTOU A APRENDER -->
+  <section id="aprender" class="learn reveal">
+    <h1>learning now</h1>
+    <p>Para além do curso, estudo Segurança Informática de forma autodidata. Quando tiver uma base mais sólida, publicarei ferramentas, scripts e writeups.</p>
+    <div class="learn-links">
+      <a class="learn-link" href="https://roadmap.sh/cyber-security" target="_blank" rel="noopener">
+        <span class="learn-icon">🗺</span>RoadMap Cyber Security
+      </a>
+      <a class="learn-link" href="https://www.learnpython.org/en/" target="_blank" rel="noopener">
+        <span class="learn-icon">🐍</span>Learn Python
+      </a>
+      <a class="learn-link" href="https://www.cursoemvideo.com/curso/java-poo/" target="_blank" rel="noopener">
+        <span class="learn-icon">☕</span>Learn Java POO
+      </a>
+      <a class="learn-link" href="https://www.codecademy.com/" target="_blank" rel="noopener">
+        <span class="learn-icon">🎓</span>Codecademy
+      </a>
+      <a class="learn-link" href="https://www.codingame.com/" target="_blank" rel="noopener">
+        <span class="learn-icon">🎮</span>CodinGame
+      </a>
+    </div>
+  </section>
+
+  <!-- SOBRE MIM -->
+  <section id="mimm" class="mim reveal">
+    <h1>sobre mim</h1>
+    <p>Acredito que o mundo está a mudar mais rápido do que a maioria das pessoas consegue acompanhar — especialmente no que toca a tecnologia e segurança digital. Tento estar sempre um passo à frente.</p>
+    <p>Fora do ecrã: leio, corro, vejo séries, exploro a DeepWeb por curiosidade e partilho conhecimento com quem quer aprender.</p>
+  </section>
+
+  <!-- LINKS -->
+  <section id="linkss" class="linkss reveal">
+    <h1>links</h1>
+    <ul class="links-list">
+      <li><a href="https://github.com/tomasafonsoferreiracarvalho-eng" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/tomás-carvalho-09282a3aa" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://www.instagram.com/_._.patinho._._/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://portal2.ipt.pt/pt/cursos/licenciaturas/l_-_ei/" target="_blank" rel="noopener">Curso LEI — IPT</a></li>
+    </ul>
+  </section>
+
+  <!-- CONTACTOS -->
+  <section id="contacts" class="contactos reveal">
+    <h1>contacto</h1>
+    <p>
+      <b>E-mail:</b> tomasafonsoferreiracarvalho@gmail.com<br>
+      <b>Académico:</b> aluno28175@ipt.pt
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Tomás Carvalho <span class="sep">·</span> built with HTML, CSS & JS</p>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
-
 </html>
